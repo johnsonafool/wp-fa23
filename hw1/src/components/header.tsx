@@ -15,10 +15,11 @@ export function Header({ heading, text, children }: DashboardHeaderProps) {
         </h1>
         {text && <p className="text-lg text-muted-foreground">{text}</p>}
       </div>
-      {children}
-      <Button variant="outline" className="ml-auto">
-        Button
-      </Button>
+      {children ?? (
+        <Button variant="outline" className="ml-auto">
+          Button
+        </Button>
+      )}
     </div>
   );
 }
